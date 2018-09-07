@@ -16,7 +16,7 @@ This command does 3 things:
 2. Adds an `unhandledRejection` event listener to `process` which throws informative error on any unhandled promise rejection
 3. Requires all files in `test` directory matching `test/**/_test.*` glob pattern and also requires `test/things/index_test.js`
 
-You can suply a `--no-handle-rejections` option to this command to disable unhandledRejection event listener.
+You can supply a `--no-handle-rejections` option to this command to disable unhandledRejection event listener.
 
 Example usage in shell script file:
 
