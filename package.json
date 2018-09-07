@@ -1,0 +1,29 @@
+{
+  "name": "enhanced-tape-runner",
+  "version": "1.0.0",
+  "description": "Small collection of simple utilities for running tape tests",
+  "scripts": {
+    "test": "./test.sh"
+  },
+  "keywords": [
+    "tape",
+    "babel",
+    "b7",
+    "es6"
+  ],
+  "author": "Alexey D",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0",
+    "eslint": "^5.5.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "glob": "^7.1.3",
+    "yargs": "^12.0.1"
+  }
+}
