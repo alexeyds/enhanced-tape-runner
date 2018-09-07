@@ -2,9 +2,18 @@
   "name": "enhanced-tape-runner",
   "version": "1.0.0",
   "description": "Small collection of simple utilities for running tape tests",
+  "bin": "./bin/enhanced-tape-runner",
   "scripts": {
     "test": "./test.sh"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexeyds/enhanced-tape-runner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexeyds/enhanced-tape-runner/issues"
+  },
+  "homepage": "https://github.com/alexeyds/enhanced-tape-runner",
   "keywords": [
     "tape",
     "babel",
@@ -12,7 +21,7 @@
     "es6"
   ],
   "author": "Alexey D",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.0.0",
     "eslint": "^5.5.0",
