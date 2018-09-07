@@ -7,7 +7,7 @@ var loadTests = require("../lib/load_tests");
 var handlePromiseRejections = require("../lib/promise_rejection");
 var args = require("yargs").argv;
 
-if (!args.skipHandleRejections) {
+if (args.handleRejections !== false) {
   handlePromiseRejections();
 }
 
