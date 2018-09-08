@@ -1,6 +1,6 @@
 {
   "name": "enhanced-tape-runner",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1",
   "description": "Small collection of simple utilities for running tape tests",
   "bin": "./bin/enhanced-tape-runner",
   "scripts": {
