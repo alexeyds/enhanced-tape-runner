@@ -22,7 +22,7 @@ test("throwPromiseRejectionError with error", function(t) {
     throwPromiseRejectionError(expectedError);
     t.fail("throws error");
   } catch(e) {
-    t.equal(e, expectedError, "throws error");
+    t.equal(e, expectedError, "throws the error");
   } finally {
     t.end();
   }
@@ -31,12 +31,8 @@ test("throwPromiseRejectionError with error", function(t) {
 test("throwPromiseRejectionError with object", function(t) {
   let object = {a: 1};
 
-  try {
-    throwPromiseRejectionError(object);
-    t.fail("throws error");
-  } catch(e) {
-    t.equal(e.message, JSON.stringify(object), "throws error with correct message");
-  } finally {
-    t.end();
-  }
+  t.throws(() => throwPromiseRejectionError(object), new RegExp(JSON.stringify(object)), 
+    "throws error with correct message");
+  
+  t.end();
 });
