@@ -1,7 +1,7 @@
 import test from "tape";
 import { onUnhandledRejection, throwPromiseRejectionError } from "../lib/promise_rejection.js";
 
-test("promise_rejection onUnhandledRejection", function(t) {
+test("onUnhandledRejection", function(t) {
   t.timeoutAfter(50);
 
   let expectedError = new Error("foobar");
@@ -15,14 +15,14 @@ test("promise_rejection onUnhandledRejection", function(t) {
   Promise.reject(expectedError);
 });
 
-test("promise_rejection throwPromiseRejectionError", function(t) {
+test("throwPromiseRejectionError with error", function(t) {
   let expectedError = new Error("foo");
 
   try {
     throwPromiseRejectionError(expectedError);
     t.fail("throws error");
   } catch(e) {
-    t.equal(expectedError.stack, e.message, "throws error with correct message");
+    t.equal(e, expectedError, "throws error");
   } finally {
     t.end();
   }
