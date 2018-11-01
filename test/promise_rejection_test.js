@@ -27,3 +27,16 @@ test("throwPromiseRejectionError with error", function(t) {
     t.end();
   }
 });
+
+test("throwPromiseRejectionError with object", function(t) {
+  let object = {a: 1};
+
+  try {
+    throwPromiseRejectionError(object);
+    t.fail("throws error");
+  } catch(e) {
+    t.equal(e.message, JSON.stringify(object), "throws error with correct message");
+  } finally {
+    t.end();
+  }
+});
