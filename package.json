@@ -4,7 +4,7 @@
   "description": "Small collection of simple utilities for running tape tests",
   "bin": "./bin/enhanced-tape-runner",
   "scripts": {
-    "test": "./test.sh"
+    "test": "./test.sh test"
   },
   "repository": {
     "type": "git",
